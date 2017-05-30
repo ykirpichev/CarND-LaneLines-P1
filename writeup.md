@@ -12,6 +12,15 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./examples/grayscale.jpg "Grayscale"
+[image_105_original]: ./test_images/105.jpg "Image_105.jpg"
+[image_105_blurred_gray]: ./test_images_output/105_blurred_gray.jpg "Blurred_gray"
+[image_105_bounded_edges]: ./test_images_output/105_bounded_edges.jpg "Bounded edges"
+[image_105_edges]: ./test_images_output/105_edges.jpg "Edges"
+[image_105_gamma_corrected]: ./test_images_output/105_gamma_corrected.jpg "Gamma corrected"
+[image_105_gray]: ./test_images_output/105_gray.jpg "Gray"
+[image_105_lines]: ./test_images_output/105_lines.jpg "Lines"
+[image_105_white]: ./test_images_output/105_white.jpg "White"
+[image_105]: ./test_images_output/105.jpg "Processed"
 
 ---
 
@@ -19,13 +28,26 @@ The goals / steps of this project are the following:
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-My pipeline consisted of 8 steps. First, I made sure that image is in appropriate format, then I transformed all yellow colors to solid white in order to make them clearly visible, then I adjusted gamma in order to avoid shadows and bright images, then I converted the images to grayscale, then I applied gaussian in order to filter noise, then I did canny edge detection, then selected region of interest and finally applied hough line detection algorithm. 
+My pipeline consisted of 8 steps.
+First, I made sure that image is in appropriate format,
+![alt text][image_105_original]
+then I transformed all yellow colors to solid white in order to make them clearly visible,
+![alt text][image_105_white]
+then I adjusted gamma in order to avoid shadows and bright images,
+![alt text][image_105_gamma_corrected]
+then I converted the images to grayscale,
+![alt text][image_105_gray]
+then I applied gaussian in order to filter noise,
+![alt text][image_105_blurred_gray]
+then I did canny edge detection,
+![alt text][image_105_edges]
+then selected region of interest
+![alt text][image_105_bounded_edges]
+and finally applied hough line detection algorithm.
+![alt text][image_105_lines]
+![alt text][image_105]
 
 In order to draw a single line on the left and right lanes, I implemented the draw_lines_averaged_and_extrapolated() function. It does averaging and extrapolation of the line segments detected by pipeline.
-
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
-
-![alt text][image1]
 
 
 ### 2. Identify potential shortcomings with your current pipeline
